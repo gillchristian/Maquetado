@@ -4,7 +4,7 @@ Maquetado is an starting repository for web apps that comes already with gulp ta
 
 ##how to
 ```
-$ git clone directory-name
+$ git clone https://github.com/gillchristian/Maquetado.git directory-name
 $ cd directory-name
 $ npm install
 $ gulp
