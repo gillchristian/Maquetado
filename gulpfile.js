@@ -1,22 +1,30 @@
 'use strict';
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    jade = require('gulp-jade'),
-    merge = require('merge-stream');
+var gulp            = require('gulp'),
+    sass            = require('gulp-sass'),
+    minifycss       = require('gulp-minify-css'),
+    rename          = require('gulp-rename'),
+    jade            = require('gulp-jade'),
+    merge           = require('merge-stream'),
+    autoprefixer    = require('gulp-autoprefixer'),
+    sourcemaps      = require('gulp-sourcemaps');
 
 
 // sass compile task:
 
 gulp.task('sass', function () {
 
-    return gulp.src('toCompile/sass/**/*.scss')
-        .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('css/'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minifycss())
+    return gulp.src('toCompile/sass/style.scss')
+        .pipe(sourcemaps.init())
+            .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
+            .pipe(autoprefixer())
+            .pipe(gulp.dest('css/'))
+        .pipe(sourcemaps.write({includeContent: true}))
+            .pipe(rename({suffix: '.min'}))
+            .pipe(minifycss())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('css/'));
 
 });
