@@ -4,8 +4,9 @@ html
   head
     title
     link(rel='stylesheet', type='text/css', href='css/style.min.css')
-  body
-    header
-    main
-    footer
+  body.box
+    //- MAIN
+    include includes/content.jade
+    //- FOOTER
+    include includes/footer.jade
     script(type='text/javascript' src='js/app.js')

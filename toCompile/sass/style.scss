@@ -1,1 +1,27 @@
-// add your SCSS files in this folder
+// style
+@import 'mixins';
+
+.box {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.navbar {
+	@include width-height(100%, 10vh);
+	background-color: $navbar;
+}
+
+.main {
+	@include width-height(80%, 80vh);
+	background-color: $main;
+}
+
+.sidebar {
+	@include width-height(20%, 80vh);
+	background-color: $sidebar;
+}
+
+.footer {
+	background-color: $footer;
+	@include width-height(100%, 10vh);
+}

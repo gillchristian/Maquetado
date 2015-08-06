@@ -1,0 +1,6 @@
+@import 'variables';
+
+@mixin width-height($width, $height){
+    width: $width;
+    height: $height;
+}

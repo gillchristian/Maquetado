@@ -11,14 +11,31 @@ $ gulp
 ```
 
 ##tastks
-```$ gulp sass``` compiles scss files in ```toCompile/sass``` directory to ```css``` directory.
+`$ gulp sass` compiles scss files in `toCompile/sass` into `css/style.min.css`, also adds the CSS prefixes and creates the `source map` file.
 
-```$ gulp jade``` compiles jade files in ```toCompile/jade``` directory to ```html``` directory, ```toCompile/index.jade``` compiles to the root directory.
+`$ gulp jade` compiles jade files in `toCompile/jade` directory to `html` directory, `toCompile/jade/index.jade` compiles to the root directory. Files inside `toCompile/jade/includes` are excluded (_excluded includes :flushed:_), use the folder to place the files you are including in other files and thus they are being compiled already.
 
-```$ gulp watch``` watches ```sass``` and ```jade``` tasks.
+`$ gulp watch` watches `sass` and `jade` tasks.
 
-default task ```gulp``` runs ```watch```.
+default task `gulp` runs `watch`.
+
+##used dependencies
+
+- [_gulp-sass_](4)
+- [_gulp-minify-css_](5)
+- [_gulp-rename_](6)
+- [_gulp-jade_](7)
+- [_gulp-merge_](8)
+- [_gulp-autoprefixer_](9)
+- [_gulp-sourcemaps_](10)
 
 [1]:http://sass-lang.com/
 [2]:http://jade-lang.com/
 [3]:http://gulpjs.com/
+[4]:https://github.com/dlmanning/gulp-sass
+[5]:https://github.com/murphydanger/gulp-minify-css
+[6]:https://github.com/hparra/gulp-rename
+[7]:https://github.com/phated/gulp-jade
+[8]:https://github.com/varya/gulp-merge
+[9]:https://github.com/sindresorhus/gulp-autoprefixer
+[10]:https://github.com/floridoo/gulp-sourcemaps

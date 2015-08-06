@@ -38,7 +38,7 @@ gulp.task('sass:watch', function () {
 gulp.task('jade', function () {
 
         // compile all the jade files
-    var allTemplates = gulp.src(['toCompile/jade/**/*.jade', '!toCompile/jade/index.jade' ])
+    var allTemplates = gulp.src(['toCompile/jade/**/*.jade', '!toCompile/jade/index.jade', '!toCompile/jade/{includes,includes/**}' ])
         .pipe(jade({
             pretty: true
         }))
