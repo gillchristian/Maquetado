@@ -28,6 +28,7 @@ default task `gulp` runs `watch`.
 - [_gulp-merge_](8)
 - [_gulp-autoprefixer_](9)
 - [_gulp-sourcemaps_](10)
+- [_gulp-plumber_](11)
 
 [1]:http://sass-lang.com/
 [2]:http://jade-lang.com/
@@ -39,3 +40,4 @@ default task `gulp` runs `watch`.
 [8]:https://github.com/varya/gulp-merge
 [9]:https://github.com/sindresorhus/gulp-autoprefixer
 [10]:https://github.com/floridoo/gulp-sourcemaps
+[11]:https://github.com/floatdrop/gulp-plumber

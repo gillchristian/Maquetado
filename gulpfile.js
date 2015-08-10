@@ -7,7 +7,8 @@ var gulp            = require('gulp'),
     jade            = require('gulp-jade'),
     merge           = require('merge-stream'),
     autoprefixer    = require('gulp-autoprefixer'),
-    sourcemaps      = require('gulp-sourcemaps');
+    sourcemaps      = require('gulp-sourcemaps'),
+    plumber         = require('gulp-plumber');
 
 
 // sass compile task:
@@ -39,16 +40,20 @@ gulp.task('jade', function () {
 
         // compile all the jade files
     var allTemplates = gulp.src(['toCompile/jade/**/*.jade', '!toCompile/jade/index.jade', '!toCompile/jade/{includes,includes/**}' ])
+        .pipe(plumber())
         .pipe(jade({
             pretty: true
         }))
+        .pipe(plumber.stop())
         .pipe(gulp.dest('html/'))
 
         // compile the index file    
     var index = gulp.src('toCompile/jade/index.jade')
+        .pipe(plumber())
         .pipe(jade({
             pretty: true
         }))
+        .pipe(plumber.stop())
         .pipe(gulp.dest(''));
 
     return merge(allTemplates, index);
