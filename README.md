@@ -21,23 +21,15 @@ default task `gulp` runs `watch`.
 
 ##used dependencies
 
-- [_gulp-sass_](4)
-- [_gulp-minify-css_](5)
-- [_gulp-rename_](6)
-- [_gulp-jade_](7)
-- [_gulp-merge_](8)
-- [_gulp-autoprefixer_](9)
-- [_gulp-sourcemaps_](10)
-- [_gulp-plumber_](11)
+- [_gulp-sass_](https://www.npmjs.com/package/gulp-sass)
+- [_gulp-minify-css_](https://www.npmjs.com/package/gulp-minify-css)
+- [_gulp-rename_](https://www.npmjs.com/package/gulp-rename)
+- [_gulp-jade_](https://www.npmjs.com/package/gulp-jade)
+- [_gulp-merge_](https://www.npmjs.com/package/gulp-merge)
+- [_gulp-autoprefixer_](https://www.npmjs.com/package/gulp-autoprefixer)
+- [_gulp-sourcemaps_](https://www.npmjs.com/package/gulp-sourcemaps)
+- [_gulp-plumber_](https://www.npmjs.com/package/gulp-plumber)
 
 [1]:http://sass-lang.com/
 [2]:http://jade-lang.com/
 [3]:http://gulpjs.com/
-[4]:https://www.npmjs.com/package/gulp-sass
-[5]:https://www.npmjs.com/package/gulp-minify-css
-[6]:https://www.npmjs.com/package/gulp-rename
-[7]:https://www.npmjs.com/package/gulp-jade
-[8]:https://www.npmjs.com/package/gulp-merge
-[9]:https://www.npmjs.com/package/gulp-autoprefixer
-[10]:https://www.npmjs.com/package/gulp-sourcemaps
-[11]:https://www.npmjs.com/package/gulp-plumber
